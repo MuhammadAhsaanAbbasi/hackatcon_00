@@ -15,7 +15,7 @@ const SignUp = () => {
     };
     const router = useRouter()
     return (
-        <div className="flex gap-x-32 items-center px-4">
+        <div className="flex gap-x-40 items-center flex-col-reverse md:flex-row gap-y-5">
             <motion.div
                 className="flex flex-col items-center gap-y-4"
                 variants={scale}
@@ -27,8 +27,8 @@ const SignUp = () => {
                     ease: 'easeInOut'
                 }}
             >
-                <h2 className="font-bold font-['ananda'] text-4xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 from-15% via-purple-500 via-30% to-indigo-500 to-90% h-full ">Maa_Creative_Designs</h2>
-                <h2 className='text-2xl font-semibold'>Explore All New Images</h2>
+                <h2 className="font-bold font-['ananda'] text-2xl md:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-pink-500 from-15% via-purple-500 via-30% to-indigo-500 to-90% h-full ">Maa_Creative_Designs</h2>
+                <h2 className='text-xl md:text-2xl font-semibold'>Explore All New Images</h2>
                 <Button onClick={() => router.push("/gallery")}>{"Let's Explore"}</Button>
             </motion.div>
             <motion.div
