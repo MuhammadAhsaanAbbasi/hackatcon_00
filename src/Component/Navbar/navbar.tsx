@@ -30,23 +30,7 @@ const Navbar = async () => {
                                 Gallery
                             </Button>
                         </Link>
-                        <DropdownMenu>
-                            <DropdownMenuTrigger className="w-full justify-start flex items-center gap-x-2 text-xl">
-                                <AlbumButton />
-                            </DropdownMenuTrigger>
-                            <DropdownMenuContent className="flex flex-col items-center justify-start gap-y-2">
-                                {folders.map((folder) => (
-                                    <DropdownMenuItem asChild key={folder.path}>
-                                    <Link href={`/album/${folder.path}`}>
-                                        <Button variant="ghost" className="w-full justify-start flex items-center gap-x-2 text-xl">
-                                            {folder.name}
-                                        </Button>
-                                    </Link>
-                                    </DropdownMenuItem>
-                                ))}
-                                
-                            </DropdownMenuContent>
-                        </DropdownMenu>
+                        <AlbumButton />
                         <Link href={"/favorite"}>
                             <Button variant="ghost" className="w-full justify-start flex items-center gap-x-2 text-xl">
                                 <Star />
