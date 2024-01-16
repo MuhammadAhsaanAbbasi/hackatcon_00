@@ -29,11 +29,11 @@ export default function Layout({
                     direction="vertical"
                     className="min-h-screen max-w-md rounded-lg border"
                 >
-                    <ResizablePanel defaultSize={25}>
+                    <ResizablePanel defaultSize={15}>
                         <Navbar />
                     </ResizablePanel>
                     <ResizableHandle />
-                    <ResizablePanel defaultSize={75}>
+                    <ResizablePanel defaultSize={85}>
                             {children}
                     </ResizablePanel>
                 </ResizablePanelGroup>
