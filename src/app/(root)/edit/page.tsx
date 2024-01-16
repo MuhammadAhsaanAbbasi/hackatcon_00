@@ -121,7 +121,6 @@ const Page = ({ searchParams: { publicId } }: Props) => {
                             src={publicId}
                             sizes="100vw"
                             effects={[{contrast:'level_40'}]}
-                            assetType='_linear'
                             alt=""
                         />
                     )}
