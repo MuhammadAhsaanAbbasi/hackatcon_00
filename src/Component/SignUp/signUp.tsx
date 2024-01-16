@@ -15,7 +15,7 @@ const SignUp = () => {
     };
     const router = useRouter()
     return (
-        <div className="flex gap-x-40 items-center flex-col-reverse md:flex-row gap-y-5">
+        <div className="flex gap-x-40 items-center flex-col-reverse md:flex-row gap-y-5 justify-center md:justify-normal">
             <motion.div
                 className="flex flex-col items-center gap-y-4"
                 variants={scale}
@@ -42,10 +42,11 @@ const SignUp = () => {
                 }}
             >
                 <NormalImage
-                    imagedata={"https://res.cloudinary.com/dw51hrvbj/image/upload/v1705340893/t6buesexectpzaelr1wv.jpg"}
+                    imagedata={"https://res.cloudinary.com/dw51hrvbj/image/upload/v1705340893/Outdoors/t6buesexectpzaelr1wv.jpg"}
                     alt='Any Image'
                     height={450}
                     width={500}
+                    className='h-56 w-56 md:h-full md:w-full'
                 />
             </motion.div>
         </div>

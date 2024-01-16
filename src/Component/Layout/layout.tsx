@@ -14,14 +14,30 @@ export default function Layout({
     children: React.ReactNode
 }) {
     return (
-        
+
         <ThemeLayout>
             <Header />
-            <ResizablePanelGroup direction="horizontal" className='flex flex-col md:flex-row'>
-                <ResizablePanel defaultSize={20} className=""><Navbar /></ResizablePanel>
-                <ResizableHandle withHandle />
-                <ResizablePanel defaultSize={80}>{children}</ResizablePanel>
-            </ResizablePanelGroup>
+            <div className='max-md:hidden'>
+                <ResizablePanelGroup direction="horizontal">
+                    <ResizablePanel defaultSize={20} className=""><Navbar /></ResizablePanel>
+                    <ResizableHandle withHandle />
+                    <ResizablePanel defaultSize={80}>{children}</ResizablePanel>
+                </ResizablePanelGroup>
+            </div>
+            <div className="md:hidden">
+                <ResizablePanelGroup
+                    direction="vertical"
+                    className="min-h-screen max-w-md rounded-lg border"
+                >
+                    <ResizablePanel defaultSize={25}>
+                        <Navbar />
+                    </ResizablePanel>
+                    <ResizableHandle />
+                    <ResizablePanel defaultSize={75}>
+                            {children}
+                    </ResizablePanel>
+                </ResizablePanelGroup>
+            </div>
         </ThemeLayout>
     )
 }

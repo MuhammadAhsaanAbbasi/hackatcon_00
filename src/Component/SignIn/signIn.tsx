@@ -47,6 +47,7 @@ const SignIn = () => {
                     alt='Any Image'
                     height={450}
                     width={500}
+                    className='h-56 w-56 md:h-full md:w-full'
                 />
             </motion.div>
         </div>
