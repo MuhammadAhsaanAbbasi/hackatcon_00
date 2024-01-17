@@ -1,7 +1,7 @@
 "use client"
 import { Button } from '@/components/ui/button'
 import React from 'react'
-import NormalImage from '../SignIn/signInImage'
+import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { motion } from "framer-motion"
 const SignUp = () => {
@@ -15,7 +15,7 @@ const SignUp = () => {
     };
     const router = useRouter()
     return (
-        <div className="flex gap-x-40 items-center flex-col-reverse md:flex-row gap-y-5 justify-center md:justify-normal">
+        <div className="flex gap-x-40 items-center flex-col-reverse md:flex-row gap-y-5 justify-center md:justify-normal px-5">
             <motion.div
                 className="flex flex-col items-center gap-y-4"
                 variants={scale}
@@ -41,8 +41,8 @@ const SignUp = () => {
                     ease: 'easeInOut'
                 }}
             >
-                <NormalImage
-                    imagedata={"/assets/karachi.jpg"}
+                <Image
+                    src={"/assets/karachi.jpg"}
                     alt='Any Image'
                     height={450}
                     width={500}

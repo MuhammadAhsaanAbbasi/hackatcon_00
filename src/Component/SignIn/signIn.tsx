@@ -2,7 +2,7 @@
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { SignInButton } from '@clerk/nextjs'
-import NormalImage from './signInImage'
+import Image from 'next/image'
 import { motion } from "framer-motion"
 const SignIn = () => {
     const Variants = {
@@ -14,7 +14,7 @@ const SignIn = () => {
         visible: { opacity: 1, scale: 1 },
     };
     return (
-        <div className="flex gap-x-40 items-center flex-col-reverse md:flex-row gap-y-5">
+        <div className="flex gap-x-40 items-center flex-col-reverse md:flex-row gap-y-5 px-5">
             <motion.div
                 className="flex flex-col items-center gap-y-4"
                 variants={scale}
@@ -42,8 +42,8 @@ const SignIn = () => {
                     ease: 'easeInOut'
                 }}
             >
-                <NormalImage
-                    imagedata={"/assets/gym.jpg"}
+                <Image
+                    src={"/assets/gym.jpg"}
                     alt='Any Image'
                     height={450}
                     width={500}
