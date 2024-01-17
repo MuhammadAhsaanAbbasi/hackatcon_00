@@ -20,10 +20,10 @@ const Navbar = async () => {
         <div className="pb-12">
             <div className="space-y-4 py-4">
                 <div className="px-3 py-2">
-                    <h2 className="mb-2 px-4 text-2xl font-semibold tracking-tight">
+                    <h2 className="mb-2 px-4 md:text-2xl font-semibold tracking-tight text-xl">
                         Explore Image
                     </h2>
-                    <div className="space-y-3 my-3">
+                    <div className="space-y-3 my-3 text-lg md:text-xl">
                         <Link href={"/gallery"}>
                             <Button variant="secondary" className="w-full justify-start flex items-center gap-x-2 text-xl">
                                 <BookImage />
