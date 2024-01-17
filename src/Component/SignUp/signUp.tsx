@@ -42,7 +42,7 @@ const SignUp = () => {
                 }}
             >
                 <NormalImage
-                    imagedata={"https://res.cloudinary.com/dw51hrvbj/image/upload/v1705340893/Outdoors/t6buesexectpzaelr1wv.jpg"}
+                    imagedata={"/assets/karachi.jpg"}
                     alt='Any Image'
                     height={450}
                     width={500}

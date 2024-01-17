@@ -43,7 +43,7 @@ const SignIn = () => {
                 }}
             >
                 <NormalImage
-                    imagedata={"https://res.cloudinary.com/dw51hrvbj/image/upload/v1705341614/vivc6b6c1mjcha6s2sbv.jpg"}
+                    imagedata={"/assets/gym.jpg"}
                     alt='Any Image'
                     height={450}
                     width={500}
