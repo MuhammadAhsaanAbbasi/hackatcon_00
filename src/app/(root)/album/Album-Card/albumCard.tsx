@@ -11,12 +11,13 @@ import {
 import { Folder } from '../page'
 import Link from 'next/link'
 import Loader from '@/Component/loader/loader'
+import { Skeleton } from '@/components/ui/skeleton'
 
 const AlbumCard = ({ folders }: { folders: Folder }) => {
     return (
         <>
             <Suspense fallback={<div className='flex justify-center items-center max-w-full h-96'>
-                <Loader />
+            <Skeleton className="w-40 h-20 rounded-full" />
             </div>}>
                 <Card className="">
                     <CardHeader>

@@ -20,7 +20,7 @@ const FavoriteList = ({initialResorces}:{initialResorces:SearchResult[]}) => {
                 alt=''
                 height={450}
                 width={500}
-                Unhearted={(UnheartedResorces)=>{
+                unhearted={(UnheartedResorces)=>{
                     setResorces((currentResorces)=>
                     currentResorces.filter((resorces)=>resorces.public_id!==UnheartedResorces.public_id)
                     )
