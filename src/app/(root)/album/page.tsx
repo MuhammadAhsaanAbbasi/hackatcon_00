@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import cloudinary from "cloudinary"
 import AlbumCard from './Album-Card/albumCard'
 import { SignedIn, SignedOut } from '@clerk/nextjs'
 import SignIn from '@/Component/SignIn/signIn'
+import Loader from '@/Component/loader/loader'
 
 export type Folder = {
     name: string,
@@ -21,11 +22,15 @@ const Album = async () => {
                     <div className="flex items-center justify-between px-4 py-5">
                         <h2 className="text-3xl font-semibold">Albums</h2>
                     </div>
-                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-4 py-2 gap-y-4'>
-                        {folders.map((folder) => (
-                            <AlbumCard key={folder.path} folders={folder} />
-                        ))}
-                    </div>
+                    <Suspense fallback={<div className='flex justify-center items-center max-w-full h-96'>
+                        <Loader />
+                    </div>} >
+                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-5 px-4 py-2 gap-y-4'>
+                            {folders.map((folder) => (
+                                <AlbumCard key={folder.path} folders={folder} />
+                            ))}
+                        </div>
+                    </Suspense>
                 </div>
             </SignedIn>
             <SignedOut>

@@ -1,6 +1,5 @@
 import React from 'react'
 import cloudinary from "cloudinary"
-import { SearchResult } from '../../gallery/page'
 import AlbumGrid from './albumGrid'
 import FastRefresh from '@/Component/FastRefresh/fastRefresh'
 import { SignedIn, SignedOut } from '@clerk/nextjs'

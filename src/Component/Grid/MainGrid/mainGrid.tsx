@@ -1,4 +1,3 @@
-import { SearchResult } from '@/app/(root)/gallery/page'
 import React, { ReactNode } from 'react'
 
 const Max_Numbers = 4

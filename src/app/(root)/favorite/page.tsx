@@ -1,10 +1,12 @@
 import UploadButton from "../gallery/Upload-Button/uploadButton";
 import cloudinary from "cloudinary"
-import { SearchResult } from "../gallery/page";
 import FavoriteList from "./Favorite-List/favoriteList";
 import FastRefresh from "@/Component/FastRefresh/fastRefresh";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import SignIn from "@/Component/SignIn/signIn";
+import { Suspense } from "react";
+import Loader from "@/Component/loader/loader";
+import FavoriteImage from "./favoritepage";
 
 export const revalidate = 300
 const page = async () => {
@@ -24,7 +26,11 @@ const page = async () => {
                         <h2 className="text-3xl font-semibold">Favorite</h2>
                         <UploadButton />
                     </div>
-                    <FavoriteList initialResorces={results.resources} />
+                    <Suspense fallback={<div className='flex justify-center items-center max-w-full h-96'>
+                        <Loader />
+                    </div>}>
+                    <FavoriteImage/>
+                    </Suspense>
                 </div>
             </SignedIn>
             <SignedOut>

@@ -1,7 +1,6 @@
 "use client"
 import MainGrid from '@/Component/Grid/MainGrid/mainGrid'
 import CloudinaryImage from '../../gallery/CloudinaryImage/cloudinaryImage'
-import { SearchResult } from '../../gallery/page'
 import React, { useEffect, useState } from 'react'
 
 const FavoriteList = ({initialResorces}:{initialResorces:SearchResult[]}) => {

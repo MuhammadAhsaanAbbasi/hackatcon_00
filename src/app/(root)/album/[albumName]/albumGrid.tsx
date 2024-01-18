@@ -1,5 +1,4 @@
 import MainGrid from '@/Component/Grid/MainGrid/mainGrid'
-import { SearchResult } from '../../gallery/page'
 import CloudinaryImage from '../../gallery/CloudinaryImage/cloudinaryImage'
 
 function AlbumGrid({images}:{images:SearchResult[]}) {

@@ -1,6 +1,6 @@
 "use server"
 
-import { SearchResult } from "@/app/(root)/gallery/page"
+// import { SearchResult } from "@/app/(root)/gallery/page"
 import cloudinary from "cloudinary"
 
 export async function addImageToAlbum(images:SearchResult,albums:string) {

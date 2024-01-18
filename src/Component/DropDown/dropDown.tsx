@@ -9,7 +9,7 @@ import {
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { DialogBox } from "./dialog"
-import { SearchResult } from "@/app/(root)/gallery/page";
+// import { SearchResult } from "@/app/(root)/gallery/page";
 import { useState } from "react"
 
 const DropDownMenu = ({ images }: { images: SearchResult }) => {
